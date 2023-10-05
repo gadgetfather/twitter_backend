@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const connect = async () => {
-  return mongoose.connect("mongodb://localhost:27017/users", {});
+  return mongoose.connect("mongodb://127.0.0.1:27017/twitter", {});
 };
 
 module.exports = connect;
