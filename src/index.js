@@ -7,6 +7,7 @@ const { Tweet } = require("./models/tweet");
 app.use(express.json());
 
 app.listen(port, async () => {
+  app.use("/api", require("./routes"));
   console.log(`Example app listening at http://localhost:${port}`);
   await connect();
   console.log("Database connected");
