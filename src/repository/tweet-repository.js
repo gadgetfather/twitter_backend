@@ -8,10 +8,17 @@ const create = async (tweet) => {
   return Tweet.create(tweet);
 };
 
+const remove = async (id) => {
+  return Tweet?.findByIdAndRemove(id);
+};
+
 const update = async (id, tweet) => {
   return Tweet.updateOne({ _id: id }, tweet);
 };
 
-const remove = async (id) => {
-  return Tweet?.findByIdAndRemove(id);
+module.exports = {
+  getAll,
+  create,
+  remove,
+  update,
 };
