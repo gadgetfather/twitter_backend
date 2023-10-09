@@ -9,6 +9,7 @@ const tweetSchema = new mongoose.Schema(
       maxlength: [280, "Cannot be more than 250 chars"],
     },
     hashtags: [{ type: mongoose.Schema.Types.ObjectId, ref: "Hashtag" }],
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
   },
   {
     timestamps: true,
